@@ -141,38 +141,43 @@ https://github.com/manik2255/AI1103-PROBABILITY-AND-RANDOM-VARIABLES/blob/main/A
 \end{lstlisting}
 
 \section{problem 6.14}
-Events $A$ and $B$ are such that $P(A) = \frac{1}{2}$, $P(B) = \frac{7}{12}$ and $P(not\: A \:or \:not\: B) = \frac{1}{4}$. State whether $A$ and $B$ are independent ?
+Events $A$ and $B$ are such that $\pr{A} = \frac{1}{2}$, $\pr{B} = \frac{7}{12}$ and $\pr{not\: A \:or\: not\: B} = \frac{1}{4}$. State whether $A$ and $B$ are independent ?
 \section{solution}
 \begin{align}
-P(not\: A \:or\: not\: B) = P(A' + B') 
+\pr{not\: A \:or\: not\: B} = \pr{A' + B'} 
 \end{align}
 We know that,\\
-\begin{align}
- P(A' + B') = P((AB)')
+\begin{align} \label{eq:1}
+ \pr{A' + B'} = \pr{(AB)'}
 \end{align}
 As,\\
+
 \begin{align}
 (AB)(AB)' = 0 \\
-P(AB) + P((AB)') = 1\\
-P(AB) = 1- P((AB)')
+\pr{AB} + \pr{(AB)'} = 1
 \end{align}
-Using (2.0.2) in (2.0.5), We get
-\begin{align}
-P(AB) = 1- P(A' + B')
+\begin{align} \label{eq:2}
+\pr{AB} = 1- \pr{(AB)'}
 \end{align}
-On substituting the value of P(A' + B') in (2.0.6), we get
+Using ~\ref{eq:1} in ~\ref{eq:2}, We get
+\begin{align} \label{eq:3}
+\pr{AB} = 1- \pr{A' + B'}
+\end{align}
+On substituting the value of $\pr{A' + B'}$ in ~\ref{eq:3}, we get
 \begin{align}
-P(AB) = 1- \frac{1}{4}\\
- \implies P(AB) = \frac{3}{4}
+\pr{AB} = 1- \frac{1}{4}
+\end{align}
+\begin{align} \label{eq:4}
+ \implies \pr{AB} = \frac{3}{4}
 \end{align}
 Given,
-$P(A) = \frac{1}{2} \:and \:P(B) = \frac{7}{12}$
-\begin{align}
-\implies P(A)P(B) = \frac{7}{24}
+$\pr{A} = \frac{1}{2} \:and \:\pr{B} = \frac{7}{12}$
+\begin{align} \label{eq:5}
+\implies \pr{A}\pr{B} = \frac{7}{24}
 \end{align}
-From (2.0.8) and (2.0.9),
+From ~\ref{eq:4} and ~\ref{eq:5},
 \begin{align}
- P(AB)\neq P(A)P(B)
+ \pr{AB}\neq \pr{A}\pr{B}
 \end{align}
 As the events $A$ and $B$ does not satisfy the definition of independent events,\\
 $\therefore$ Events $A$ and $B$ are dependent.
