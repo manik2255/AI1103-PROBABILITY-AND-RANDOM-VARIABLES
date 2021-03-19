@@ -1,47 +1,37 @@
-#Importing numpy, scipy, mpmath and pyplot
 import numpy as np
-import scipy 
-import matplotlib.pyplot as plt
+# import uniform distribution
+from scipy.stats import uniform
+from matplotlib import pyplot as plt
+# data to be plotted 
+x = np.arange(0,2)  
+y =np.exp(-x)
 
-x = np.linspace(0, 100, 101)
-f =  np.exp(-x)
-plt.plot(x, f, linewidth=1, label=r"$f(x) = e^{-x}$")
-plt.xlim(0, 100)
-plt.ylabel("f(x)") 
-plt.xlabel("x")
-plt.legend(fontsize=14)
-plt.show()
 
-maxrange=50
-maxlim=100.0
-x = np.linspace(0,maxlim,maxrange)#points on the x axis
-simlen = int(1e6) #number of samples
-err = [] #declaring probability list
-pdf = [] #declaring pdf list
+def ecdf(a):
+    x, counts = np.unique(a, return_counts=True)
+    cusum = np.cumsum(counts)
+    return x, cusum / cusum[-1]
+    return x
 
-#randvar = np.random.normal(0,1,simlen)
-#randvar = np.loadtxt('uni.dat',dtype='double')
-randvar = np.loadtxt('gau.dat',dtype='double')
+U = uniform.rvs(size=1000)
+V =-np.log(U)
+x = ecdf(V)[0]
+y = ecdf(V)[1]
+x = np.insert(x, 0, x[0])
+y = np.insert(y, 0, 0.)
+plt.plot(x, y,'o',label='Simulation')
+plt.grid(True)
+v=np.linspace(0,15,1000)
+plt.plot(v,np.exp(-v),label='Analysis')
+plt.title("CDF of random variable $V$")
+plt.xlabel("$v$")
+plt.ylabel("$F_V(v)$")
 
-for i in range(0,maxrange):
-	err_ind = np.nonzero(randvar < x[i]) #checking probability condition
-	err_n = np.size(err_ind) #computing the probability
-	err.append(err_n/simlen) #storing the probability values in a list
+count=0
+for i in range(1000):
+  
+  if x[i]<1.0:
+        count +=1
 
-	
-for i in range(0,maxrange-1):
-	test = (err[i+1]-err[i])/(x[i+1]-x[i])
-	pdf.append(test) #storing the pdf values in a list
-
-def gauss_pdf(x):
-	return (-1)*np.exp(-x)
-	
-vec_gauss_pdf = scipy.vectorize(gauss_pdf)
-
-plt.plot(x[0:(maxrange-1)].T,pdf,'o')
-plt.plot(x,vec_gauss_pdf(x))#plotting the CDF
-plt.grid() #creating the grid
-plt.title("probability density function")
-plt.xlabel('$x_i$')
-plt.ylabel('$p_X(x_i)$')
-plt.legend(["Numerical","Theory"])
+print("simulated probability P(X>1) is : ",1-(count/1000))
+print("Which is nearly equal to Theoritical probability P(X>1) 0.368 ")
