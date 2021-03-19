@@ -24,8 +24,9 @@ plt.grid(True)
 v=np.linspace(0,15,1000)
 plt.plot(v,np.exp(-v),label='Analysis')
 plt.title("CDF of random variable $V$")
-plt.xlabel("$v$")
-plt.ylabel("$F_V(v)$")
+plt.xlabel("$x$")
+plt.ylabel("$F_x(x)$")
+plt.legend(loc='best')
 
 count=0
 for i in range(1000):
