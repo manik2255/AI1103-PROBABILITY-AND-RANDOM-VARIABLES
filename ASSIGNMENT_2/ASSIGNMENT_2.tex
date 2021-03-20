@@ -143,10 +143,6 @@ Given,
 \begin{align} \label{1}
 \fn{x} = e^{-x} , 0<x<\infty
 \end{align}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=7cm]{Figure.png}
-\end{figure}\\
 We have to find \pr{X>1},
 \begin{align}
 \pr{X>1} = \int_{1}^{\infty}{\fn{x}}\,dx\label{2}
@@ -157,8 +153,53 @@ Using \eqref{1} in \eqref{2}
 &= \left[-e^{-x}\right]_1^{\infty}\\
 &= (-e^{-\infty}) - (-e^{-1})\\
 &= e^{-1}\\
-\implies  \pr{X>1} &= \frac{1}{e}
+&= \frac{1}{e}\\
+ \implies \pr{X>1} &= 0.368
 \end{align}
+Finding the probability using uniform distribution,
 
+Let $F_X(x)$ be the cumulative distribution function of random variable X.
+\begin{align}
+    F_X(x)=\int_{0}^x \fn{x} dx\label{x}
+\end{align}
+$F_X(x)$ can be obtained from the uniform distribution of a random variable U on (0,1) and let U=$e^{-x}$. 
+\begin{align}
+    0 < U < 1
+\end{align}
+As for random variable X also,
+\begin{align}
+    0 < F_X(x) < 1
+\end{align}
+This similarity between U and $F_X(x)$ is used to generate the random variable X from U.
+\begin{align}
+    F_X(x)&=\pr{X<x}\\
+    &=\pr{-\log_e U<x}\\
+    &=\pr{U<e^{-x}}\\
+    &=F_U(e^{-x})\label{y}
+\end{align}
+From uniform distribution,
+\begin{align}
+    F_U(x)= x ,0<x<\infty \label{z}
+\end{align}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=\columnwidth]{Figure.png}
+\end{figure}
+\\Using \eqref{z} in \eqref{y},
+\\Cumulative distribution function (CDF) of random variable X is,
+\begin{align}
+F_X(x) &= \pr{X<x}\\
+&= 1 -e^{-x} ,0<x<\infty \label{g}
+\end{align}
+Now we have to find \pr{X>1},
+\begin{align}
+    \pr{X>1} &= 1-\pr{X<1}
+\end{align}
+Using  \eqref{g},
+\begin{align}
+    \pr{X>1} &= 1-(1 -e^{-1})\\
+    \pr{X>1} &= e^{-1}\\
+   \implies \pr{X>1} &= 0.368 
+\end{align}
 
 \end{document}
