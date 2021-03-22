@@ -19,11 +19,10 @@ x = ecdf(V)[0]
 y = ecdf(V)[1]
 x = np.insert(x, 0, x[0])
 y = np.insert(y, 0, 0.)
-plt.plot(x, y,'o',label='Simulation')
+plt.plot(x, y,'o',label='cdf')
 plt.grid(True)
 v=np.linspace(0,15,1000)
-plt.plot(v,np.exp(-v),label='Analysis')
-plt.title("CDF of random variable $V$")
+plt.plot(v,np.exp(-v),label='pdf')
 plt.xlabel("$x$")
 plt.ylabel("$F_x(x)$")
 plt.legend(loc='best')
