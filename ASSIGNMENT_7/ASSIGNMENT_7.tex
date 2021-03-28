@@ -125,29 +125,29 @@ https://github.com/manik2255/AI1103-PROBABILITY-AND-RANDOM-VARIABLES/blob/main/A
 \end{lstlisting}
 \section{GATE 2021 ST PROBLEM.14}
 
-Let A and b be two events such that $\pr{B}=\frac{3}{4}$ and $\pr{A\cup B^c}=\frac{1}{2}$.If A and B are independent, then $\pr{A}$ equals
+Let A and b be two events such that $\pr{B}=\frac{3}{4}$ and $\pr{A + B^{\prime}}=\frac{1}{2}$.If A and B are independent, then $\pr{A}$ equals
 
 \section{SOLUTION}
 Given,
 \begin{align}
 \pr{B}=\frac{3}{4}\label{a}\\
-\pr{A\cup B^c} =\frac{1}{2} \label{b}
+\pr{A + B^{\prime}} =\frac{1}{2} \label{b}
 \end{align}
 we know that,
 \begin{align}
-\pr{B^c} = 1-\pr{B} \label{c}
+\pr{B^{\prime}} = 1-\pr{B} \label{c}
 \end{align}
 using \eqref{a} in \eqref{c},
 \begin{align}
-\pr{B^c} = \frac{1}{4} \label{d}
+\pr{B^{\prime}} = \frac{1}{4} \label{d}
 \end{align}
 we know that,
 \begin{align}
-\pr{A\cup B^c} = \pr{A} +\pr{B^c} - \pr{A\cap B^c}
+\pr{A + B^{\prime}} = \pr{A} +\pr{B^{\prime}} - \pr{A |B^{\prime}}
 \end{align}
 A and B are independent $\iff$ A and $B^c$ are independent
 \begin{align}
-\pr{A\cup B^c} = \pr{A} +\pr{B^c} - \pr{A}\pr{B^c} \label{e}
+\pr{A + B^{\prime}} = \pr{A} +\pr{B^{prime}} - \pr{A}\pr{B^{\prime}} \label{e}
 \end{align}
 using \eqref{b}  and \eqref{d} in \eqref{e}
 \begin{align}
