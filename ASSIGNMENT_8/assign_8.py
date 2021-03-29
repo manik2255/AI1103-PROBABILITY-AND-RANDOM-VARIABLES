@@ -7,7 +7,7 @@ sampleB=[0]*sample_size
 sampleC=[0]*sample_size
 count=0
 for i in range(sample_size):
-    a=np.random.choice([0,1],p=[4/12,8/12])
+    A=np.random.choice([0,1],p=[4/12,8/12])
     if A==0:
         B=np.random.choice([0,1],p=[3/11,8/11])
         if B==0:
