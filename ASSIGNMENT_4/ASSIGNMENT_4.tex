@@ -147,20 +147,6 @@ Using \eqref{a} in \eqref{b},
 \begin{align}
 \pr{X<x} = \int_{0}^{x}{e^{-x}}\,dx \label{c}
 \end{align}
-We need to find $\pr{ max(X,Y)<2}$,which is also can be written as
-\begin{align}
-   \pr{max(X,Y)<2} &=\pr{X<2 ,Y<2}
-\end{align}
-As X and Y be independent random variables,
-\begin{align}
-   \pr{max(X,Y)<2} &=\pr{X<2}\pr{Y<2} \label{d}
-\end{align}
-Using \eqref{c} in \eqref{d},
-\begin{align}
-   \pr{max(X,Y)<2} &= (\int_{0}^{2}{e^{-x}}\,dx)(\int_{0}^{2}{e^{-y}}\,dy)\\
-   &= \left[-e^{-x}\right]_0^2 \left[-e^{-y}\right]_0^2\\
-   &=0.748
-\end{align}
 Finding the probability using uniform distribution,Let $F_X(x)$ be the cumulative distribution function of random variable X.
 \begin{align}
 F_X(x) =\int_{0}^{x}{\fn{x}}\,dx
@@ -212,26 +198,4 @@ using \eqref{j},
 &=0.748.
 \end{align}
 
-We need to find $\pr{ max(X,Y)<2}$,which is also can be written as
-\begin{align}
-   \pr{max(X,Y)<2} =\pr{X<2 ,Y<X} + \pr{Y<2 ,X\le Y} \label{e}
-\end{align}
- $\pr{X<2 ,Y<X}$ can also be written as,
- \begin{align}
-  \pr{X<2 ,Y<X} &=\int_{0}^{2}{e^{-x}(\int_{0}^{x}{e^{-y}}\,dy)}\,dx\\
-  &= \int_{0}^{2}{e^{-x}(1-e^{-x})}\,dx\\
-   &= \left[-e^{-x} +\frac{e^{-2x}}{2}\right]_0^2\\
-    &=0.3738 \label{f}
-\end{align}
-similarly, $\pr{Y<2 ,X\le Y}$ can also be written as,
-\begin{align}
-  \pr{Y<2 ,X\le Y} &=\int_{0}^{2}{e^{-y}(\int_{0}^{y}{e^{-x}}\,dx)}\,dy\\
-  &= \int_{0}^{2}{e^{-y}(1-e^{-y})}\,dy\\
-   &= \left[-e^{-y} +\frac{e^{-2y}}{2}\right]_0^2\\
-    &=0.3738 \label{g}
-\end{align}
-Using \eqref{f} and \eqref{g} in \eqref{e},
-\begin{align}
- \pr{max(X,Y)<2} &=0.748 
-\end{align}
 \end{document}
