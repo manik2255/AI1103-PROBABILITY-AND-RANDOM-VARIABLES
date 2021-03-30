@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import random
-th_prob=0.3934
+th_prob=0.3935
 lamda = 1/2 #for every 3 minutes
 
 size = 100000
