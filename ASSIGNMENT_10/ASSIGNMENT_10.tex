@@ -120,7 +120,7 @@ https://github.com/manik2255/AI1103-PROBABILITY-AND-RANDOM-VARIABLES/blob/main/A
 
 \section{CSIR UGC NET EXAM (Dec 2015), PROBLEM.53}
 Let $X_i 's$ be independent random variables such that $X_i 's$ are symmetric about 0 and $var(X_i)=2i - 1$,for $i\geq 1$.then,
-$$\lim_{n \to \infty}\pr{X_1 +X_2 + \dots + X_n > n log_e{n}}$$
+$$\lim_{n \to \infty}\pr{X_1 +X_2 + \dots + X_n > n\log{n}}$$
 \section{SOLUTION}
 Let $X= X_1 +X_2 + \dots + X_n $,
 as $X_i 's$ are symmetric about 0.
@@ -142,18 +142,18 @@ Applying Chebyshev's Inequality for the random variable X, for any $k>0$
 \begin{align}
 \pr{\abs{X-E[X]}> k\sigma_X} \leq \frac{1}{k^{2}} \label{c}
 \end{align}
-let $k=log_e{n} $ ,
+let $k=\log{n} $ ,
 using \eqref{a} and \eqref{b} in \eqref{c},
 \begin{align}
-\pr{X> n log_e{n}} \leq \frac{1}{(log_e{n})^{2}}
+\pr{X> n\log{n}} \leq \frac{1}{(\log{n})^{2}}
 \end{align}
 as any probability is greater than 0,
 \begin{align}
-0< \pr{X> n log_e{n}} \leq \frac{1}{(log_e{n})^{2}} \label{d}
+0< \pr{X> n\log{n}} \leq \frac{1}{(\log{n})^{2}} \label{d}
 \end{align}
 applying sandwich principle to \eqref{d},
 \begin{align}
-\lim_{n \to \infty} 0< \lim_{n \to \infty} \pr{X> n log_e{n}} \leq \lim_{n \to \infty} \frac{1}{(log_e{n})^{2}}\\
-\lim_{n \to \infty}\pr{X_1 +X_2 + \dots + X_n > n log_e{n}} = 0
+\lim_{n \to \infty} 0< \lim_{n \to \infty} \pr{X> n\log{n}} \leq \lim_{n \to \infty} \frac{1}{(\log{n})^{2}}\\
+\lim_{n \to \infty}\pr{X_1 +X_2 + \dots + X_n > n\log{n}} = 0
 \end{align}
 \end{document}
