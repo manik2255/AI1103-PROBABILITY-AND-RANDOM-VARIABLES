@@ -170,5 +170,48 @@ as,
 Var(X) &< Var(Y)
 \end{align}
 $\therefore$ $Var(Y) >Var(X)$, independent of n,p and $\lambda$.
+\begin{enumerate}
+    \item $var(X)=Var(Y)$\\
+          using \eqref{a} and \eqref{b},
+          \begin{align}
+          np(1-p) = \lambda
+          \end{align}
+          using \eqref{c},
+          \begin{align}
+          np(1-p) = np\\
+          1-p=1\\
+          p=0
+          \end{align}
+          which is wrong as per the question$(0<p<1)$.
+          hence the option is incorrect.
+    \item $var(X)<Var(Y)$\\
+          using \eqref{a} and \eqref{b},
+          \begin{align}
+          np(1-p) < \lambda
+          \end{align}
+          using \eqref{c},
+          \begin{align}
+          np(1-p) < np\\
+          1-p<1\\
+          p>0
+          \end{align}
+          which is true as per the question$(0<p<1)$.
+          hence the option is correct.
+    \item $var(Y)<Var(X)$\\
+    using \eqref{a} and \eqref{b},
+          \begin{align}
+          np(1-p) > \lambda
+          \end{align}
+          using \eqref{c},
+          \begin{align}
+          np(1-p) > np\\
+          1-p>1\\
+          p<0
+          \end{align}
+          which is wrong as per the question$(0<p<1)$.
+          hence the option is incorrect.
+    \item $Var(X)$ may be larger or smaller than $Var(Y)$ depending on the values of n,p and $\lambda$.\\
+    Wrong, since we have shown that irrespective of the values of lambda,n, and p, $var(y) > var(x)$
+\end{enumerate}
 
 \end{document}
