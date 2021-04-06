@@ -141,6 +141,20 @@ using \eqref{a} in \eqref{b},
 \pr{X=x}= e^{-\frac{1}{2}} \frac{(\frac{1}{2})^{x}}{x\,!} \label{c}
 \end{align}
 we need to find the probability that a customer arrives within the next 3 minutes given that no customer arrives for the first 3 minutes after the shop opens,which can also be written as,
+\begin{table}[ht]
+\caption{Probability distribution for values of X and Y}
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+     & P(X)&P(Y)\\
+    \hline
+    0& $e^{-\frac{1}{2}}$& $e^{-\frac{1}{2}}$\\
+    \hline
+    1 & $\frac{e^{-\frac{1}{2}}}{2}$ & $\frac{e^{-\frac{1}{2}}}{2}$\\
+    \hline
+    \end{tabular}
+\end{center} 
+\end{table}
 \begin{align}
 \pr{Y\neq 0|X=0}=\frac{\pr{Y\neq 0,X=0}}{\pr{X=0}}
 \end{align}
@@ -152,8 +166,7 @@ As the arrival of customers in second 3 minutes does not depend on the arrival o
 \end{align}
 using \eqref{c},
 \begin{align}
-\pr{Y\neq 0|X=0}&=1- e^{-\frac{1}{2}} \frac{(\frac{1}{2})^{0}}{0\,!}\\
-&=1- e^{-\frac{1}{2}}\\
+\pr{Y\neq 0|X=0}&=1- e^{-\frac{1}{2}} \\
 &= 0.3935
 \end{align}
 \begin{figure}[ht]
@@ -162,5 +175,4 @@ using \eqref{c},
     \caption{Theoretical vs simulation}
 \label{fig_1}
 \end{figure}
-
 \end{document}
