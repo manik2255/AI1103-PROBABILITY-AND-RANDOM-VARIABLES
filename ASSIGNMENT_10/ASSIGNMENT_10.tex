@@ -154,15 +154,25 @@ Applying Chebyshev's Inequality for the random variable X, for any $k>0$
 let $k=\log{n} $ ,
 using \eqref{a} and \eqref{b} in \eqref{c},
 \begin{align}
-\pr{X> n\log{n}} \leq \frac{1}{(\log{n})^{2}}
+\pr{\abs{X}> n\log{n}} \leq \frac{1}{(\log{n})^{2}}\\
+\pr{X> n\log{n}} + \pr{X< -n\log{n}} \leq \frac{1}{(\log{n})^{2}} \label{e}
+\end{align}
+As, X is symmetric about 0,
+\begin{align}
+\pr{X> n\log{n}} =\pr{X< -n\log{n}} \label{f}
+\end{align}
+using \eqref{f} in \eqref{e},
+\begin{align}
+2\pr{X> n\log{n}} \leq \frac{1}{(\log{n})^{2}}\\
+\pr{X> n\log{n}} \leq \frac{1}{2(\log{n})^{2}}
 \end{align}
 as any probability is greater than 0,
 \begin{align}
-0< \pr{X> n\log{n}} \leq \frac{1}{(\log{n})^{2}} \label{d}
+0< \pr{X> n\log{n}} \leq \frac{1}{2(\log{n})^{2}} \label{d}
 \end{align}
 applying sandwich principle to \eqref{d},
 \begin{align}
-\lim_{n \to \infty} 0< \lim_{n \to \infty} \pr{X> n\log{n}} \leq \lim_{n \to \infty} \frac{1}{(\log{n})^{2}}\\
+\lim_{n \to \infty} 0< \lim_{n \to \infty} \pr{X> n\log{n}} \leq \lim_{n \to \infty} \frac{1}{2(\log{n})^{2}}\\
 \lim_{n \to \infty}\pr{X_1 +X_2 + \dots + X_n > n\log{n}} = 0
 \end{align}
 Hence the option.4 is correct.
