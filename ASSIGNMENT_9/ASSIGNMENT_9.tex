@@ -127,9 +127,10 @@ https://github.com/manik2255/AI1103-PROBABILITY-AND-RANDOM-VARIABLES/blob/main/A
 Customers arrive at a shop according to Poisson distribution with a mean of 10 customers/hour. The manager notes that no customer arrives for the first 3 minutes after the shop opens. The probability that a customer arrives within the next 3 minutes is
 \section{solution}
 Given, 
-10 customers arrive in a time interval of an hour $\iff$ $\frac{t}{6}$ customers arrive in a time interval of t minutes.
+mean of 10 customers arrive in a time interval of 60 minutes $\iff$ mean of $\dfrac{t}{6}$ customers arrive in a time interval of t minutes,
+Customers arrive according to Poisson distribution with a mean of $\dfrac{t}{6}$ customers/t minutes,
 \begin{align}
-\lambda = \frac{t}{6} \label{a}
+\therefore \lambda = \frac{t}{6} \label{a}
 \end{align}
 Let $X$ denotes the number of customers in first t minutes,$Y$ denotes the number of customers in second t minutes.
 according to  poisson distribution,
@@ -141,6 +142,9 @@ using \eqref{a} in \eqref{b},
 \pr{X=x}= e^{-\frac{t}{6}} \frac{(\frac{t}{6})^{x}}{x\,!} \label{c}
 \end{align}
  the probability that a customer arrives within the next t minutes given that no customer arrives for the first t minutes after the shop opens,which can also be written as,
+\begin{align}
+\pr{Y\neq 0|X=0}=\frac{\pr{Y\neq 0,X=0}}{\pr{X=0}}
+\end{align}
 \begin{table}[ht]
 \caption{Probability distribution for values of X and Y}
 \begin{center}
@@ -155,9 +159,7 @@ using \eqref{a} in \eqref{b},
     \end{tabular}
 \end{center} 
 \end{table}
-\begin{align}
-\pr{Y\neq 0|X=0}=\frac{\pr{Y\neq 0,X=0}}{\pr{X=0}}
-\end{align}
+
 As the arrival of customers in second t minutes does not depend on the arrival of customers in first t minutes, X and Y are independent,
 \begin{align}
 \pr{Y\neq 0|X=0}&=\frac{\pr{Y\neq 0}\pr{X=0}}{\pr{X=0}}\\
