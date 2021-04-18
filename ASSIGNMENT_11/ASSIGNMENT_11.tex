@@ -158,6 +158,22 @@ using \eqref{c},
 \begin{align}
 Var(X)&=\lambda(1-p)
 \end{align}
+\begin{table}[ht]
+\caption{Mean and Variance for random variables X and Y}
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+     & $X$&$Y$\\
+    \hline
+    E& $\lambda$& $\lambda$\\
+    \hline
+     $var$& $\lambda(p-1)$ & $\lambda$\\
+    \hline
+    \end{tabular}
+\end{center} 
+\label{tab:1}
+\end{table}
+
 using \eqref{b},
 \begin{align}
 Var(X)&=Var(Y)(1-p)\\
@@ -172,46 +188,35 @@ Var(X) &< Var(Y)
 $\therefore$ $Var(Y) >Var(X)$, independent of n,p and $\lambda$.
 \begin{enumerate}
     \item $var(X)=Var(Y)$\\
-          using \eqref{a} and \eqref{b},
+          using TABLE \ref{tab:1},
           \begin{align}
-          np(1-p) = \lambda
-          \end{align}
-          using \eqref{c},
-          \begin{align}
-          np(1-p) = np\\
+          \lambda(1-p) = \lambda\\
           1-p=1\\
           p=0
           \end{align}
           which is wrong as per the question$(0<p<1)$.
           hence the option is incorrect.
     \item $var(X)<Var(Y)$\\
-          using \eqref{a} and \eqref{b},
+          using TABLE \ref{tab:1},
           \begin{align}
-          np(1-p) < \lambda
-          \end{align}
-          using \eqref{c},
-          \begin{align}
-          np(1-p) < np\\
+          \lambda(1-p) < \lambda\\
           1-p<1\\
           p>0
           \end{align}
           which is true as per the question$(0<p<1)$.
           hence the option is correct.
     \item $var(Y)<Var(X)$\\
-    using \eqref{a} and \eqref{b},
+     using TABLE \ref{tab:1},
           \begin{align}
-          np(1-p) > \lambda
-          \end{align}
-          using \eqref{c},
-          \begin{align}
-          np(1-p) > np\\
+          \lambda(1-p) > \lambda\\
           1-p>1\\
           p<0
           \end{align}
           which is wrong as per the question$(0<p<1)$.
           hence the option is incorrect.
     \item $Var(X)$ may be larger or smaller than $Var(Y)$ depending on the values of n,p and $\lambda$.\\
-    Wrong, since we have shown that irrespective of the values of lambda,n, and p, $var(y) > var(x)$
+    Wrong, since we have shown that irrespective of the values of lambda, n, and p, $var(y) > var(x)$
 \end{enumerate}
 
 \end{document}
+ 
